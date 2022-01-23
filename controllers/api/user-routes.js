@@ -1,8 +1,7 @@
 const router = require('express').Router();
 
-const res = require('express/lib/response');
 const { User, Post, Vote, Comment } = require('../../models');
-const withAuth = require('../utils/auth');
+const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res)=>{
     User.findAll({
