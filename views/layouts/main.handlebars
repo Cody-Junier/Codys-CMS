@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just Tech News</title>
+  <title>This is a Blog Spot</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
@@ -12,11 +12,12 @@
   <div class="wrapper">
     <header>
       <h1>
-        <a href="/">Just Tech News</a>
+        <a href="/">This is a Blog Spot</a>
       </h1>
         <nav>
-            {{#if loggedIn}}
+            <a href="/">homepage</a>
             <a href="/dashboard">dashboard</a>
+            {{#if loggedIn}}
             <button id="logout" class="btn-no-style">logout</button>
             {{else}}
             <a href="/login">login</a>
@@ -27,7 +28,7 @@
       {{{ body }}}
     </main>
     <footer>
-      Thanks for visiting!
+      You're a Real Hero, Pal
     </footer>
   </div>
 {{#if loggedIn}}
