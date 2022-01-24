@@ -10,7 +10,10 @@ const helpers = require('./utils/helpers');
 
 const sess = {
     secret: 'Super secret secret',
-    cookie: {},
+    // ends session after 1 minute
+    cookie: {
+        // maxAge:60000
+    },
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
@@ -20,7 +23,7 @@ const sess = {
 app.use(session(sess));
 const hbs = exphbs.create({ helpers });
 
-
+// using handlebars
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(express.json());
